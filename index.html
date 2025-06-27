@@ -3,96 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Swasthya Sathi - Your Healthcare Companion</title>
+  <title>Swasthya Sathi - Chatbot</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container nav-container">
-      <div class="logo">
-        <div class="logo-circle"><span class="logo-icon">🩺</span></div>
-        <span class="logo-text">Swasthya Sathi</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="nearby.html" class="nav-link">Nearby Hospital</a></li>
-        <li><a href="about.html" class="nav-link">About Us</a></li>
-      </ul>
-    </div>
-  </nav>
-  <header id="home">
-    <div class="container">
-      <h1>Swasthya Sathi</h1>
-      <p class="subtitle">Your Relaxing Healthcare Chatbot Companion</p>
-    </div>
-  </header>
   <main>
-    <section class="hero animate-hero">
-      <div class="container">
-        <img src="https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg?w=826&t=st=1680000000~exp=1680003600~hmac=demo" alt="Friendly Doctor" class="hero-img">
-        <div class="hero-text">
-          <h2>Welcome to Swasthya Sathi</h2>
-          <p>Get instant healthcare advice, book appointments, and access wellness tips—all in one place.</p>
-        </div>
-      </div>
-    </section>
-    <section class="chatbot-section animate-chatbot">
-      <div class="container chatbot-container">
-        <div class="chatbot-header">Chat with Swasthya Sathi</div>
+    <section class="chatbot-main">
+      <div class="container chatbot-card">
+        <div class="chatbot-header">Swasthya Sathi Chatbot</div>
         <div class="chatbot-window">
           <div class="chatbot-message bot">Hi! I'm Swasthya Sathi. How can I help you today?</div>
-          <!-- User and bot messages will appear here -->
         </div>
-        <form class="chatbot-input">
-          <input type="text" placeholder="Type your message..." disabled>
-          <button type="submit" disabled>Send</button>
+        <form class="chatbot-input" autocomplete="off">
+          <input type="text" placeholder="Type your message..." aria-label="Type your message">
+          <button type="submit">Send</button>
         </form>
-        <small class="chatbot-note">(Chatbot functionality coming soon!)</small>
-      </div>
-    </section>
-    <section class="health-tips">
-      <div class="container">
-        <h3>Daily Health Tips</h3>
-        <ul>
-          <li>Stay hydrated and drink plenty of water.</li>
-          <li>Eat a balanced diet rich in fruits and vegetables.</li>
-          <li>Exercise regularly for at least 30 minutes a day.</li>
-          <li>Get enough sleep and manage stress.</li>
-        </ul>
-      </div>
-    </section>
-    <section class="appointment" id="nearby">
-      <div class="container">
-        <h3>Book an Appointment</h3>
-        <form class="appointment-form">
-          <input type="text" placeholder="Your Name" required disabled>
-          <input type="email" placeholder="Your Email" required disabled>
-          <input type="date" required disabled>
-          <button type="submit" disabled>Book Now</button>
-        </form>
-        <small class="appointment-note">(Appointment booking coming soon!)</small>
-      </div>
-    </section>
-    <section class="contact">
-      <div class="container">
-        <h3>Contact & Support</h3>
-        <p>Email: <a href="mailto:support@swasthyasathi.com">support@swasthyasathi.com</a></p>
-        <p>Emergency: <a href="tel:112">112</a></p>
-      </div>
-    </section>
-    <section class="about" id="about">
-      <div class="container">
-        <h3>About Us</h3>
-        <p>Swasthya Sathi is dedicated to making healthcare accessible, comfortable, and stress-free. Our chatbot provides instant health advice, tips, and helps you find nearby hospitals and book appointments. We believe in a holistic approach to well-being, combining technology with a human touch.</p>
       </div>
     </section>
   </main>
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Swasthya Sathi. All rights reserved.</p>
-    </div>
-  </footer>
   <script src="main.js"></script>
 </body>
 </html>
