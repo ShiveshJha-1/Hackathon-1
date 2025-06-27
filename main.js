@@ -11,17 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
   sendButton.disabled = false;
   sendButton.style.cursor = 'pointer';
   sendButton.style.opacity = '1';
-
-  const botReplies = [
-    "Remember to drink enough water today!",
-    "If you feel unwell, don't hesitate to consult a doctor.",
-    "A balanced diet is key to good health.",
-    "Regular exercise helps keep your mind and body fit.",
-    "Wash your hands frequently to prevent infections.",
-    "Mental health is as important as physical health. Take a deep breath!",
-    "If you have a fever, make sure to rest and monitor your temperature.",
-    "Need to book an appointment? Just let me know!"
-  ];
+  const botReplies = ['Hello Shivesh',''];
 
   function appendMessage(text, sender) {
     const msgDiv = document.createElement('div');
@@ -41,5 +31,40 @@ document.addEventListener('DOMContentLoaded', function () {
       const reply = botReplies[Math.floor(Math.random() * botReplies.length)];
       appendMessage(reply, 'bot');
     }, 700);
+  });
+
+  document.getElementById('sendBtn').onclick = async function() {
+    const prompt = document.getElementById('userInput').value;
+    const res = await fetch('http://localhost:3000/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt })
+    });
+    const data = await res.json();
+    document.getElementById('chatResponse').innerText = data.response;
+  };
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const navOverlay = document.querySelector('.nav-overlay');
+
+  // Open/close menu
+  menuToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('open');
+    navOverlay.classList.toggle('open');
+  });
+
+  // Close menu on overlay click
+  navOverlay.addEventListener('click', function() {
+    navLinks.classList.remove('open');
+    navOverlay.classList.remove('open');
+  });
+
+  // Close menu on link click (mobile)
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function() {
+      navLinks.classList.remove('open');
+      navOverlay.classList.remove('open');
+    });
   });
 });
