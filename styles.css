@@ -314,8 +314,10 @@ footer {
   box-shadow: 0 2px 12px rgba(38,198,218,0.08);
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 100;
   opacity: 0;
   transform: translateY(-40px);
@@ -325,7 +327,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 0;
+  padding: 10px 24px;
+  background: #f8fdff;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(38,198,218,0.10);
+  gap: 16px;
 }
 .logo {
   display: flex;
@@ -539,4 +545,53 @@ footer {
   color: #d32f2f;
   text-decoration: none;
   font-weight: bold;
+}
+
+.home-hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 12px;
+  margin-top: 70px; /* Add margin to prevent overlap with fixed navbar */
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #1976d2;
+  cursor: pointer;
+  margin-left: 12px;
+}
+.menu-icon {
+  display: inline-block;
+}
+@media (max-width: 700px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background: #f8fdff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 16px rgba(38,198,218,0.10);
+    padding: 16px 0 8px 0;
+    z-index: 200;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-container {
+    position: relative;
+  }
 }

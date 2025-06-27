@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government Schemes - Swasthya Sathi</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+  <style>
+    .schemes-section {
+      max-width: 900px;
+      margin: 40px auto 0 auto;
+      padding: 0 16px;
+    }
+    .schemes-title {
+      font-size: 2rem;
+      color: #1976d2;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .schemes-desc {
+      color: #37474f;
+      font-size: 1.15rem;
+      text-align: center;
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .schemes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 28px;
+    }
+    .scheme-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(38,198,218,0.10);
+      padding: 24px 20px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: box-shadow 0.2s;
+      border-left: 6px solid #26c6da;
+      position: relative;
+    }
+    .scheme-card:hover {
+      box-shadow: 0 4px 24px rgba(38,198,218,0.18);
+      border-left: 6px solid #1976d2;
+    }
+    .scheme-icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      color: #26c6da;
+    }
+    .scheme-title {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: #1976d2;
+      margin-bottom: 6px;
+    }
+    .scheme-desc {
+      color: #37474f;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    .scheme-link {
+      color: #fff;
+      background: linear-gradient(90deg, #26c6da 0%, #1976d2 100%);
+      padding: 8px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(38,198,218,0.10);
+      margin-top: auto;
+      align-self: flex-end;
+    }
+    .scheme-link:hover, .scheme-link:focus {
+      background: linear-gradient(90deg, #1976d2 0%, #26c6da 100%);
+    }
+    @media (max-width: 600px) {
+      .schemes-section {
+        padding: 0 4px;
+      }
+      .schemes-title {
+        font-size: 1.3rem;
+      }
+      .scheme-card {
+        padding: 14px 8px 12px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-circle"><span class="logo-icon">🩺</span></div>
+        <span class="logo-text">Swasthya Sathi</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="govt-schemes.html" class="nav-link">Govt Scheme</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Open menu">
+        <span class="menu-icon">&#9776;</span>
+      </button>
+    </div>
+  </nav>
+  <section class="schemes-section">
+    <div class="schemes-title">Government Health Schemes</div>
+    <div class="schemes-desc">
+      Explore major government health schemes in India. Click on a scheme to learn more and access official resources.
+    </div>
+    <div class="schemes-grid">
+      <div class="scheme-card">
+        <span class="scheme-icon">🏥</span>
+        <div class="scheme-title">Ayushman Bharat (PM-JAY)</div>
+        <div class="scheme-desc">World's largest health assurance scheme, providing health coverage up to ₹5 lakh per family per year for secondary and tertiary care hospitalization.</div>
+        <a class="scheme-link" href="https://pmjay.gov.in/" target="_blank">Visit Site</a>
+      </div>
+      <div class="scheme-card">
+        <span class="scheme-icon">🛡️</span>
+        <div class="scheme-title">Rashtriya Swasthya Bima Yojana (RSBY)</div>
+        <div class="scheme-desc">Health insurance for families below the poverty line, offering cashless insurance for hospitalization in public and private hospitals.</div>
+        <a class="scheme-link" href="https://www.rsby.gov.in/" target="_blank">Visit Site</a>
+      </div>
+      <div class="scheme-card">
+        <span class="scheme-icon">🤰</span>
+        <div class="scheme-title">Janani Suraksha Yojana (JSY)</div>
+        <div class="scheme-desc">A safe motherhood intervention under the National Health Mission, promoting institutional delivery among poor pregnant women.</div>
+        <a class="scheme-link" href="https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=841&lid=309" target="_blank">Visit Site</a>
+      </div>
+      <div class="scheme-card">
+        <span class="scheme-icon">👩‍⚕️</span>
+        <div class="scheme-title">Pradhan Mantri Surakshit Matritva Abhiyan (PMSMA)</div>
+        <div class="scheme-desc">Ensures comprehensive and quality antenatal care, free of cost, to all pregnant women on the 9th of every month.</div>
+        <a class="scheme-link" href="https://pmsma.nhp.gov.in/" target="_blank">Visit Site</a>
+      </div>
+      <div class="scheme-card">
+        <span class="scheme-icon">🌐</span>
+        <div class="scheme-title">National Health Mission (NHM)</div>
+        <div class="scheme-desc">Aims to provide accessible, affordable, and quality health care to the rural population, especially vulnerable groups.</div>
+        <a class="scheme-link" href="https://nhm.gov.in/" target="_blank">Visit Site</a>
+      </div>
+      <div class="scheme-card">
+        <span class="scheme-icon">🏢</span>
+        <div class="scheme-title">Central Government Health Scheme (CGHS)</div>
+        <div class="scheme-desc">Comprehensive health care facilities for central government employees and pensioners in select cities across India.</div>
+        <a class="scheme-link" href="https://cghs.gov.in/" target="_blank">Visit Site</a>
+      </div>
+    </div>
+  </section>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', function() {
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html> 
