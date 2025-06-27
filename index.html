@@ -381,46 +381,29 @@
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     const navOverlay = document.querySelector('.nav-overlay');
+    
     // Open/close menu
-    menuToggle.addEventListener('click', function() {
-      navLinks.classList.toggle('open');
-      navOverlay.classList.toggle('open');
-    });
+    if (menuToggle) {
+      menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+        if (navOverlay) navOverlay.classList.toggle('open');
+      });
+    }
+    
     // Close menu on overlay click
-    navOverlay.addEventListener('click', function() {
-      navLinks.classList.remove('open');
-      navOverlay.classList.remove('open');
-    });
+    if (navOverlay) {
+      navOverlay.addEventListener('click', function() {
+        navLinks.classList.remove('open');
+        navOverlay.classList.remove('open');
+      });
+    }
+    
     // Close menu on link click (mobile)
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', function() {
         navLinks.classList.remove('open');
-        navOverlay.classList.remove('open');
+        if (navOverlay) navOverlay.classList.remove('open');
       });
-    });
-    // Chat send button logic (example, update endpoint as needed)
-    document.getElementById('sendBtn').onclick = async function() {
-      const prompt = document.getElementById('userInput').value;
-      if (!prompt.trim()) return;
-      document.getElementById('chatResponse').innerText = '';
-      try {
-        const res = await fetch('http://localhost:3000/generate', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ prompt })
-        });
-        const data = await res.json();
-        document.getElementById('chatResponse').innerText = data.response ? data.response : '';
-        document.getElementById('userInput').value = '';
-      } catch (e) {
-        document.getElementById('chatResponse').innerText = 'Error connecting to server.';
-      }
-    };
-    // Enter key submits chat
-    document.getElementById('userInput').addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') {
-        document.getElementById('sendBtn').click();
-      }
     });
   </script>
 </body>
